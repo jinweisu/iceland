@@ -81,7 +81,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 .route-time-note{margin:3px 0 25px;font-size:11px;color:#c8dcd3}
 @media(max-width:1100px){.route-strip{grid-template-columns:1fr;gap:10px}.route-strip:before{left:20px;right:auto;top:22px;bottom:25px;border-top:0;border-left:1px dashed #a6c9c18a}.route-stop{margin-left:39px;min-height:0;padding:12px 15px}.route-stop:before{left:-27px;top:19px}.route-stop strong{font-size:20px}.route-mini-flight{align-self:stretch;margin-left:69px;margin-right:22%;padding:9px 14px}.route-mini-flight:before{left:-57px;top:13px}.route-mini-flight strong{font-size:13px;margin:3px 0}.route-mini-flight .route-detail{margin-top:3px}}
 @media(max-width:480px){.route-mini-flight{margin-left:64px;margin-right:10%}.route-mini-flight:before{left:-49px}.route-stop{margin-left:35px}.route-strip:before{left:19px}.route-stop:before{left:-22px}}
-</style>
+.flight-inline{display:flex;align-items:center;flex-flow:row nowrap;gap:7px;white-space:nowrap;margin-top:5px;font-size:10px;font-weight:750;line-height:1.5;color:#3b5158;font-variant-numeric:tabular-nums}.flight-inline time{color:#815a2b}.flight-inline span{flex:none}@media(min-width:1101px){.route-strip{grid-template-columns:.86fr .86fr 1.35fr .86fr 1.35fr .86fr .86fr}.flight-inline{font-size:9px;gap:5px}}@media(max-width:1100px){.flight-inline{font-size:11px;gap:8px}}@media(max-width:400px){.flight-inline{font-size:9px;gap:5px}.route-mini-flight{margin-right:2%;padding-left:10px;padding-right:8px}}</style>
 </head>
 <body>
 <div class="top">
@@ -111,7 +111,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 <span class="route-detail">城市漫步 · 行程預留中</span>
 <span class="route-access">查看米蘭行程 <span aria-hidden="true">↗</span></span>
 </a>
-<div class="route-stop route-flight route-mini-flight" aria-label="03/09 易捷航空 MXP到KEF航班，不可點擊"><span class="route-kicker">✈ 中段航班</span><strong>MXP → KEF</strong><time class="route-date">03/09</time><span class="route-detail">易捷航空</span><span class="route-small">08:15 → 11:55</span></div>
+<div class="route-stop route-flight route-mini-flight" aria-label="03/09 易捷航空 MXP到KEF航班，不可點擊"><span class="route-kicker">✈ 中段航班</span><strong>MXP → KEF</strong><span class="flight-inline"><time>03/09</time><span>易捷航空</span><span>08:15 → 11:55</span></span></div>
 <a class="route-stop route-place route-feature" href="iceland.html" aria-label="進入冰島九天八夜自駕行程，3月9日至17日">
 <span class="route-kicker">ICELAND · 冰島</span>
 <strong>冰島 <span class="route-en">Iceland</span></strong>
@@ -119,7 +119,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 <span class="route-detail">9 天 8 夜自駕 · 行程已開放</span>
 <span class="route-access">查看冰島行程 <span aria-hidden="true">↗</span></span>
 </a>
-<div class="route-stop route-flight route-mini-flight" aria-label="03/17 泛航航空 KEF到AMS航班，不可點擊"><span class="route-kicker">✈ 中段航班</span><strong>KEF → AMS</strong><time class="route-date">03/17</time><span class="route-detail">泛航航空</span><span class="route-small">14:45 → 18:55</span></div>
+<div class="route-stop route-flight route-mini-flight" aria-label="03/17 泛航航空 KEF到AMS航班，不可點擊"><span class="route-kicker">✈ 中段航班</span><strong>KEF → AMS</strong><span class="flight-inline"><time>03/17</time><span>泛航航空</span><span>14:45 → 18:55</span></span></div>
 <a class="route-stop route-place" href="amsterdam.html" aria-label="進入阿姆斯特丹行程，3月17日至20日">
 <span class="route-kicker">NETHERLANDS · 荷蘭</span>
 <strong>阿姆斯特丹 <span class="route-en">Amsterdam</span></strong>
