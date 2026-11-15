@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b1d2b">
-<meta name="description" content="EUROPE 2027 主行程入口｜米蘭、冰島、阿姆斯特丹三站旅程。冰島9天8夜自駕行程已開放，米蘭與阿姆斯特丹行程預留中。">
-<title>EUROPE ’27 — MAIN ROUTE | Milan · Iceland · Amsterdam</title>
+<meta name="description" content="EUROPE 2027 主行程｜3/5–3/21 台灣出發，米蘭、冰島、阿姆斯特丹，最後飛回台灣。五段旅程時間軸與四段航班資訊。">
+<title>EUROPE ’27 — MAIN ROUTE | Taiwan · Milan · Iceland · Amsterdam · Taiwan</title>
 <style>
 :root{--night:#0a1c2a;--night2:#133445;--cream:#f8f4ec;--white:#fff;--muted:#adc4c9;--ink:#17333c;--line:#e4e2d9;--serif:Georgia,"Noto Serif TC","Songti TC",serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font:15px/1.65 -apple-system,BlinkMacSystemFont,"Noto Sans TC","PingFang TC",system-ui,sans-serif;background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}a:focus-visible{outline:3px solid #e9c694;outline-offset:4px}
@@ -23,13 +23,31 @@ header{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 .hero-cn{margin:32px 0 13px;font:500 clamp(23px,3vw,37px)/1.35 var(--serif);letter-spacing:.05em}
 .hero-desc{max-width:640px;margin:0;color:#d1deda;font-size:14px;line-height:1.95}
 .hero-decoration{position:absolute;right:0;top:82px;color:#b9cfce42;font:italic 185px/1 var(--serif);letter-spacing:-.1em;pointer-events:none}
-.route-strip{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:25px;align-items:start;padding:22px 0 39px;border-top:1px solid #f5f6e529}
-.route-strip:before{content:"";position:absolute;left:5%;right:5%;top:36px;border-top:1px dashed #a6c9c18a}
-.route-stop{position:relative;padding:32px 0 0;color:#e8f0e9}
-.route-stop:before{content:"";position:absolute;top:7px;left:0;width:12px;height:12px;border-radius:50%;background:#c6d8ce;border:3px solid #143746;box-shadow:0 0 0 1px #b8d6c8}
-.route-stop.is-current:before{background:#e7bd88;box-shadow:0 0 0 1px #e7bd88}
-.route-stop small{display:block;font-size:10px;letter-spacing:.17em;color:#b5ccc7}
-.route-stop strong{font:600 19px/1.5 var(--serif);letter-spacing:.04em}
+.route-strip{position:relative;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px;align-items:stretch;padding:30px 0 22px;border-top:1px solid #f5f6e529}
+.route-strip:before{content:"";position:absolute;left:7%;right:7%;top:39px;border-top:1px dashed #a6c9c18a}
+.route-stop{position:relative;isolation:isolate;display:flex;flex-direction:column;min-width:0;padding:29px 14px 16px;border:1px solid #ffffff2b;border-radius:13px;background:#e0f0e60c;color:#ecf5f0;transition:background .2s,transform .2s,border-color .2s}
+.route-stop:before{content:"";position:absolute;top:2px;left:15px;width:13px;height:13px;border-radius:50%;background:#b6d6cc;border:3px solid #183d4c;box-shadow:0 0 0 1px #b8d6c8}
+.route-stop.route-flight{background:#ffffff08;border-color:#ffffff18;color:#d0dedb}
+.route-stop.route-flight:before{background:#e4c8a7;box-shadow:0 0 0 1px #e4c8a7}
+.route-stop.route-feature{background:#d6f7e019;border-color:#acd5be77}
+.route-stop.route-place:hover{background:#d6f7e025;transform:translateY(-3px);border-color:#a6d4bf88}
+.route-kicker{font-size:10px;font-weight:850;letter-spacing:.085em;color:#b4d5c7;white-space:normal}
+.route-stop.route-flight .route-kicker{color:#e1d0b4}
+.route-stop strong{display:block;margin:9px 0 5px;font:650 clamp(15px,1.5vw,18px)/1.4 var(--serif);letter-spacing:-.035em;overflow-wrap:anywhere}
+.route-en{display:block;font:500 12px/1.4 -apple-system,BlinkMacSystemFont,system-ui,sans-serif;color:#bbd2c9;letter-spacing:.01em}
+.route-arrow{color:#e2c69d;font:650 13px/1.4 -apple-system,BlinkMacSystemFont,system-ui,sans-serif}
+.route-date{display:block;color:#f4d4aa;font-weight:800;font-size:13px;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.route-detail{display:block;margin-top:12px;color:#c6d9d5;font-size:11px;line-height:1.55}
+.route-small{display:block;margin-top:4px;color:#bbccc8;font-size:10px;line-height:1.6}
+.route-access{margin-top:auto;padding-top:14px;color:#d0ecd9;font-size:11px;font-weight:800}
+.route-access span{float:right}
+.route-connections{display:grid;grid-template-columns:1fr 1.5fr 1.5fr;gap:15px;align-items:center;padding:16px 18px;margin-bottom:29px;background:#ffffff09;border:1px solid #ffffff1e;border-radius:11px}
+.connection-heading{font-size:10px;font-weight:850;letter-spacing:.1em;color:#b8d3c7}
+.connection-leg{display:flex;flex-direction:column;gap:2px;min-width:0}
+.connection-leg strong{font-size:11px;color:#f0d9b2}
+.connection-leg span{font-size:12px;color:#e0ece5;font-weight:700}
+.connection-leg small{font-size:10px;color:#bad1ce}
+.route-connections p{grid-column:1/-1;margin:0;padding-top:7px;border-top:1px solid #ffffff16;font-size:10px;color:#b7c9c4}
 .content{padding:64px 0 95px}
 .section-title{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:15px;margin-bottom:25px}
 .section-title .num{font-size:10px;letter-spacing:.23em;font-weight:800;color:#68877d}
@@ -50,58 +68,99 @@ header{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 .card-open i{font-style:normal;font-size:24px;line-height:1}
 .bottom{padding:23px 0 38px;border-top:1px solid #dce2db;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#79928b;font-size:11px;letter-spacing:.08em}
 @media(max-width:850px){.cards{gap:12px}.card-info{padding:20px 18px}.card h3{font-size:33px}.art{height:175px}.hero-decoration{font-size:140px;opacity:.65}}
-@media(max-width:660px){header{padding:20px 0}.wrap{padding:0 19px}.hero{padding:66px 0 58px}.hero-decoration{right:-20px;top:150px;font-size:98px;opacity:.4}.hero-cn{font-size:23px;margin-top:29px}.hero-desc{font-size:13px}.route-strip{gap:8px;padding:17px 0 29px}.route-strip:before{top:31px}.route-stop{padding-top:28px}.route-stop:before{top:8px}.route-stop strong{font-size:13px}.route-stop small{font-size:9px;letter-spacing:.05em}.head-note{font-size:9px;letter-spacing:.06em}.head-note:before{display:none}.content{padding:44px 0 64px}.section-title h2{font-size:32px}.section-title p{font-size:12px}.cards{grid-template-columns:1fr;gap:16px}.card{flex-direction:row;min-height:192px}.art{width:36%;min-width:36%;height:auto}.art svg{width:100%;height:100%;min-height:192px}.card-info{padding:17px 16px}.card-meta{font-size:9px}.status{padding:3px 7px}.card h3{font-size:29px;margin:14px 0 0}.card h3 small{font-size:12px;margin-top:5px}.card p{font-size:11px;line-height:1.55;margin:9px 0 11px;min-height:0}.card-open{padding-top:9px;font-size:11px}.card-open i{font-size:19px}}
+@media(max-width:660px){header{padding:20px 0}.wrap{padding:0 19px}.hero{padding:66px 0 58px}.hero-decoration{right:-20px;top:150px;font-size:98px;opacity:.4}.hero-cn{font-size:23px;margin-top:29px}.hero-desc{font-size:13px}.head-note{font-size:9px;letter-spacing:.06em}.head-note:before{display:none}.content{padding:44px 0 64px}.section-title h2{font-size:32px}.section-title p{font-size:12px}.cards{grid-template-columns:1fr;gap:16px}.card{flex-direction:row;min-height:192px}.art{width:36%;min-width:36%;height:auto}.art svg{width:100%;height:100%;min-height:192px}.card-info{padding:17px 16px}.card-meta{font-size:9px}.status{padding:3px 7px}.card h3{font-size:29px;margin:14px 0 0}.card h3 small{font-size:12px;margin-top:5px}.card p{font-size:11px;line-height:1.55;margin:9px 0 11px;min-height:0}.card-open{padding-top:9px;font-size:11px}.card-open i{font-size:19px}}
 @media(max-width:390px){.art{width:32%;min-width:32%}.card h3{font-size:25px}.status{font-size:9px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card{transition:none}}
+@media(max-width:1020px) and (min-width:801px){.route-strip{gap:8px}.route-stop{padding-left:10px;padding-right:10px}.route-stop strong{font-size:15px}.route-kicker{font-size:9px}.route-detail{font-size:10px}}
+@media(max-width:800px){.route-strip{grid-template-columns:1fr;gap:11px;padding:19px 0 18px}.route-strip:before{top:22px;bottom:29px;left:20px;right:auto;border-top:0;border-left:1px dashed #a6c9c18a}.route-stop{min-height:0;margin-left:39px;padding:13px 16px 12px;gap:2px}.route-stop:before{top:19px;left:-26px}.route-stop strong{font-size:21px;margin:4px 0 2px}.route-en{display:inline;font-size:12px;margin-left:4px}.route-detail{margin-top:6px}.route-access{margin-top:0;padding-top:5px}.route-connections{grid-template-columns:1fr 1fr;gap:13px}.connection-heading{grid-column:1/-1}.route-connections p{grid-column:1/-1}}
+@media(max-width:480px){.route-connections{grid-template-columns:1fr}.route-connections p{grid-column:1}.route-stop{margin-left:35px}.route-stop strong{font-size:19px}.route-stop:before{left:-22px}.route-strip:before{left:19px}.hero-cn{max-width:330px;line-height:1.6}.head-note{font-size:9px;letter-spacing:.04em}.route-detail{font-size:11px}}
 </style>
 </head>
 <body>
 <div class="top">
 <div class="wrap">
-<header><a class="brand" href="index.html">EUROPE <em>’27</em></a><div class="head-note">THE JOURNEY / 03 DESTINATIONS</div></header>
+<header><a class="brand" href="index.html">EUROPE <em>’27</em></a><div class="head-note">05 MAR — 21 MAR · 2027</div></header>
 <main>
 <section class="hero" aria-labelledby="hero-title">
-<div class="eyebrow">ONE JOURNEY · THREE DESTINATIONS</div>
+<div class="eyebrow">2027.03.05 — 03.21 · THE EUROPE JOURNEY</div>
 <h1 id="hero-title">The <span>Grand</span><br>Route.</h1>
-<p class="hero-cn">米蘭 → 冰島 → 阿姆斯特丹</p>
-<p class="hero-desc">從義大利的城市風景，到冰島的壯闊自然，再到荷蘭的運河街景。三段旅程，從這裡開始。</p>
+<p class="hero-cn">台灣 → 米蘭 → 冰島 → 阿姆斯特丹 → 台灣</p>
+<p class="hero-desc">3 月 5 日從台灣出發，走訪米蘭、冰島與阿姆斯特丹，3 月 21 日回到台灣。下方依日期串起整趟旅程；點選目的地即可查看各站行程。</p>
 <div class="hero-decoration" aria-hidden="true">’27</div>
 </section>
-<nav class="route-strip" aria-label="三站行程順序">
-<a class="route-stop" href="milan.html"><small>01 · ITALY</small><strong>米蘭 Milan</strong></a>
-<a class="route-stop is-current" href="iceland.html"><small>02 · ICELAND</small><strong>冰島 Iceland</strong></a>
-<a class="route-stop" href="amsterdam.html"><small>03 · NETHERLANDS</small><strong>阿姆斯特丹</strong></a>
+<nav class="route-strip" aria-label="2027年3月5日至21日歐洲五段旅程">
+<div class="route-stop route-flight" aria-label="3月5日至6日，台灣飛往米蘭，不提供詳細頁面">
+<span class="route-kicker">OUTBOUND FLIGHT · 出發</span>
+<strong>台灣 <span class="route-arrow">→</span> 米蘭</strong>
+<time class="route-date" datetime="2027-03-05">03/05 — 03/06</time>
+<span class="route-detail">長榮航空 · TPE → MXP · 直飛</span>
+<span class="route-small">23:10 出發 / 隔日 06:50 抵達</span>
+</div>
+<a class="route-stop route-place" href="milan.html" aria-label="進入米蘭行程，3月6日至9日">
+<span class="route-kicker">ITALY · 義大利</span>
+<strong>米蘭 <span class="route-en">Milan</span></strong>
+<time class="route-date" datetime="2027-03-06">03/06 — 03/09</time>
+<span class="route-detail">城市漫步 · 行程預留中</span>
+<span class="route-access">查看米蘭行程 <span aria-hidden="true">↗</span></span>
+</a>
+<a class="route-stop route-place route-feature" href="iceland.html" aria-label="進入冰島九天八夜自駕行程，3月9日至17日">
+<span class="route-kicker">ICELAND · 冰島</span>
+<strong>冰島 <span class="route-en">Iceland</span></strong>
+<time class="route-date" datetime="2027-03-09">03/09 — 03/17</time>
+<span class="route-detail">9 天 8 夜自駕 · 行程已開放</span>
+<span class="route-access">查看冰島行程 <span aria-hidden="true">↗</span></span>
+</a>
+<a class="route-stop route-place" href="amsterdam.html" aria-label="進入阿姆斯特丹行程，3月17日至20日">
+<span class="route-kicker">NETHERLANDS · 荷蘭</span>
+<strong>阿姆斯特丹 <span class="route-en">Amsterdam</span></strong>
+<time class="route-date" datetime="2027-03-17">03/17 — 03/20</time>
+<span class="route-detail">運河街景 · 行程預留中</span>
+<span class="route-access">查看阿姆斯特丹行程 <span aria-hidden="true">↗</span></span>
+</a>
+<div class="route-stop route-flight" aria-label="3月20日至21日，阿姆斯特丹飛回台灣，不提供詳細頁面">
+<span class="route-kicker">RETURN FLIGHT · 返台</span>
+<strong>阿姆斯特丹 <span class="route-arrow">→</span> 台灣</strong>
+<time class="route-date" datetime="2027-03-20">03/20 — 03/21</time>
+<span class="route-detail">長榮航空 · AMS → TPE</span>
+<span class="route-small">21:20 出發 / 隔日 20:40 抵達<br>曼谷 BKK 轉機一次</span>
+</div>
 </nav>
+<div class="route-connections" aria-label="歐洲境內航班資訊">
+<span class="connection-heading">EUROPE FLIGHTS · 中段航班</span>
+<div class="connection-leg"><strong>03/09</strong><span>米蘭 MXP → 冰島 KEF</span><small>易捷航空 · 08:15 → 11:55</small></div>
+<div class="connection-leg"><strong>03/17</strong><span>冰島 KEF → 阿姆斯特丹 AMS</span><small>泛航航空 · 14:45 → 18:55</small></div>
+<p>航班出發及抵達時間均為各機場當地時間。</p>
+</div>
 </main>
 </div>
 </div>
 <div class="wrap">
 <section class="content" id="destinations" aria-labelledby="destinations-title">
-<div class="section-title"><div><div class="num">01 — EXPLORE YOUR STOPS</div><h2 id="destinations-title">選擇目的地</h2></div><p>依照旅程順序，點選進入各站行程。</p></div>
+<div class="section-title"><div><div class="num">THREE DESTINATIONS · 三站詳細行程</div><h2 id="destinations-title">選擇目的地</h2></div><p>依照旅程順序，點選進入各站行程。</p></div>
 <div class="cards">
 <a class="card" href="milan.html" aria-label="進入米蘭預留頁面">
 <div class="art"><svg viewBox="0 0 440 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="米蘭大教堂與義大利城市天際線插畫"><defs><linearGradient id="milanSky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f9e3d1"/><stop offset="1" stop-color="#e6a894"/></linearGradient></defs><rect width="440" height="250" fill="url(#milanSky)"/><circle cx="346" cy="58" r="37" fill="#f7d1a4" opacity=".9"/><path d="M0 210Q70 175 145 204T295 196T440 203V250H0Z" fill="#d99883"/><g stroke="#a75952" stroke-width="2" stroke-linejoin="round" fill="#fff1df"><path d="M93 222V147H125V121L143 109L162 121V146H179V101L193 90L209 101V140H231V121L249 109L266 121V148H296V222Z"/><path d="M135 120V73L141 60L147 73V120M188 100V55L195 36L202 55V100M241 120V70L248 55L255 70V120"/><path d="M102 167H284M103 185H285M103 203H285" stroke="#d8ad91"/><path d="M124 223V181Q141 166 158 181V223M176 223V159Q195 140 214 159V223M231 223V181Q248 164 266 181V223" fill="#d8aa8b"/><path d="M109 150V137L125 126L141 137V150M151 151V133L165 122L179 133V151M209 142V126L222 115L235 126V142M259 151V137L275 125L291 137V151" fill="#f9e1c4"/></g><path d="M0 221H440" stroke="#ae7865" stroke-width="2"/><path d="M30 227h380" stroke="#f8dcc1" stroke-width="3" stroke-dasharray="7 11" opacity=".75"/></svg></div>
-<div class="card-info"><div class="card-meta"><span>01 / ITALY</span><span class="status">行程預留中</span></div>
+<div class="card-info"><div class="card-meta"><span>ITALY · 03/06–03/09</span><span class="status">行程預留中</span></div>
 <h3>Milan<small>義大利 · 米蘭</small></h3>
-<p>米蘭站入口已預留，詳細行程將在這裡更新。</p>
+<p>2027.03.06–03.09<br>米蘭行程入口已預留，內容待補。</p>
 <div class="card-open"><span>進入米蘭篇</span><i aria-hidden="true">↗</i></div>
 </div></a>
 <a class="card art-feature" href="iceland.html" aria-label="進入冰島完整9天8夜自駕行程">
 <div class="art"><svg viewBox="0 0 440 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="冰島雪山、極光與冰河湖插畫"><defs><linearGradient id="iceSky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#153c53"/><stop offset="1" stop-color="#5a9ba2"/></linearGradient><linearGradient id="iceSea" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#81bec6"/><stop offset="1" stop-color="#235e78"/></linearGradient></defs><rect width="440" height="250" fill="url(#iceSky)"/><path d="M0 49Q107-8 183 30T440 22V64Q311 25 224 50T0 80Z" fill="#a6dcc6" opacity=".42"/><path d="M0 28Q123 69 218 22T440 53" fill="none" stroke="#b8e0c8" stroke-width="14" opacity=".32"/><circle cx="359" cy="45" r="21" fill="#d7f1e2"/><g fill="#f5f7ec" opacity=".8"><circle cx="60" cy="37" r="2"/><circle cx="111" cy="66" r="1.5"/><circle cx="256" cy="25" r="2"/><circle cx="313" cy="76" r="1.5"/></g><path d="M0 207 63 136 98 171 159 75 226 160 284 106 340 169 389 115 440 197V250H0Z" fill="#214a57"/><path d="M56 145 159 75 226 160 185 138 157 110 111 168 97 170Z" fill="#f2f2e7"/><path d="M258 131 284 106 340 169 309 156 283 132Z" fill="#e9f4ed"/><path d="M370 136 389 115 439 196 412 165 389 144Z" fill="#dceee9"/><path d="M0 199Q93 183 145 195T270 194T440 190V250H0Z" fill="url(#iceSea)"/><path d="m92 215 19-28 21 23 11 17-58 1ZM268 215l17-24 24 27-47 5Z" fill="#dbf3f0"/><path d="M0 232Q112 210 220 231T440 225" fill="none" stroke="#d2f1e9" stroke-width="4" opacity=".5"/></svg></div>
-<div class="card-info"><div class="card-meta"><span>02 / ICELAND</span><span class="status active">已開放</span></div>
+<div class="card-info"><div class="card-meta"><span>ICELAND · 03/09–03/17</span><span class="status active">已開放</span></div>
 <h3>Iceland<small>冰島 · 9 天 8 夜自駕</small></h3>
 <p>2027.03.09–03.17<br>每日行程、旅行地圖、住宿與行前資訊。</p>
 <div class="card-open"><span>查看完整冰島行程</span><i aria-hidden="true">↗</i></div>
 </div></a>
 <a class="card" href="amsterdam.html" aria-label="進入阿姆斯特丹預留頁面">
 <div class="art"><svg viewBox="0 0 440 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="阿姆斯特丹運河與荷蘭山形屋插畫"><defs><linearGradient id="amSky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#dce9e1"/><stop offset="1" stop-color="#acc8c5"/></linearGradient></defs><rect width="440" height="250" fill="url(#amSky)"/><circle cx="365" cy="59" r="34" fill="#f6dcb3"/><path d="M0 196V95l25-15 25 15v101M52 196V56l31-26 31 26v140M117 196V100l28-23 28 23v96M174 196V75l25-14 24 14v121M224 196V49l30-24 30 24v147M287 196V94l27-22 27 22v102M343 196V82l30-18 31 18v114M406 196V107l16-12 18 12v89" fill="#efdbbb" stroke="#567a7a" stroke-width="3" stroke-linejoin="round"/><path d="M52 58h62M61 48h45M70 39h26M224 49h60M232 39h44M244 29h20M346 80h55" stroke="#567a7a" stroke-width="3"/><g fill="#5d8184"><rect x="66" y="82" width="13" height="22" rx="3"/><rect x="91" y="82" width="13" height="22" rx="3"/><rect x="65" y="117" width="13" height="23" rx="3"/><rect x="91" y="117" width="13" height="23" rx="3"/><rect x="186" y="98" width="12" height="21" rx="3"/><rect x="242" y="76" width="14" height="23" rx="3"/><rect x="264" y="76" width="13" height="23" rx="3"/><rect x="241" y="112" width="14" height="23" rx="3"/><rect x="264" y="112" width="13" height="23" rx="3"/><rect x="361" y="106" width="13" height="22" rx="3"/><rect x="380" y="106" width="13" height="22" rx="3"/></g><rect y="195" width="440" height="55" fill="#6e9fa4"/><path d="M0 206Q110 194 220 210T440 206M0 235Q105 222 215 238T440 235" stroke="#e0eee1" stroke-width="3" fill="none" opacity=".7"/><path d="M23 197Q81 173 144 195M23 198v9M144 196v11" fill="none" stroke="#f5eddf" stroke-width="4"/></svg></div>
-<div class="card-info"><div class="card-meta"><span>03 / NETHERLANDS</span><span class="status">行程預留中</span></div>
+<div class="card-info"><div class="card-meta"><span>NETHERLANDS · 03/17–03/20</span><span class="status">行程預留中</span></div>
 <h3>Amsterdam<small>荷蘭 · 阿姆斯特丹</small></h3>
-<p>阿姆斯特丹站入口已預留，詳細行程將在這裡更新。</p>
+<p>2027.03.17–03.20<br>阿姆斯特丹行程入口已預留，內容待補。</p>
 <div class="card-open"><span>進入阿姆斯特丹篇</span><i aria-hidden="true">↗</i></div>
 </div></a>
 </div>
 </section>
-<footer class="bottom"><span>EUROPE ’27 · MILAN / ICELAND / AMSTERDAM</span><span>THE MAIN ROUTE</span></footer>
+<footer class="bottom"><span>2027.03.05—03.21 · TAIWAN / MILAN / ICELAND / AMSTERDAM / TAIWAN</span><span>THE MAIN ROUTE</span></footer>
 </div>
 </body></html>
