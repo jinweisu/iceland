@@ -61,6 +61,26 @@ header{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 @media(max-width:1020px) and (min-width:801px){.route-strip{gap:8px}.route-stop{padding-left:10px;padding-right:10px}.route-stop strong{font-size:15px}.route-kicker{font-size:9px}.route-detail{font-size:10px}}
 @media(max-width:800px){.route-strip{grid-template-columns:1fr;gap:11px;padding:19px 0 18px}.route-strip:before{top:22px;bottom:29px;left:20px;right:auto;border-top:0;border-left:1px dashed #a6c9c18a}.route-stop{min-height:0;margin-left:39px;padding:13px 16px 12px;gap:2px}.route-stop:before{top:19px;left:-26px}.route-stop strong{font-size:21px;margin:4px 0 2px}.route-en{display:inline;font-size:12px;margin-left:4px}.route-detail{margin-top:6px}.route-access{margin-top:0;padding-top:5px}.route-connections{grid-template-columns:1fr 1fr;gap:13px}.connection-heading{grid-column:1/-1}.route-connections p{grid-column:1/-1}}
 @media(max-width:480px){.route-connections{grid-template-columns:1fr}.route-connections p{grid-column:1}.route-stop{margin-left:35px}.route-stop strong{font-size:19px}.route-stop:before{left:-22px}.route-strip:before{left:19px}.hero-cn{max-width:330px;line-height:1.6}.head-note{font-size:9px;letter-spacing:.04em}.route-detail{font-size:11px}}
+
+.route-strip{grid-template-columns:1.16fr 1.1fr .73fr 1.1fr .73fr 1.12fr 1.16fr;gap:9px}
+.route-stop.route-place{background:#286b57;border-color:#9ad7b1;color:#f5fff8}
+.route-stop.route-feature{background:#236c69;border-color:#a5d9d3}
+.route-stop.route-place:hover{background:#35836c;border-color:#d9f7e5}
+.route-stop.route-flight{background:#ebdcc4;border-color:#c9ad84;color:#2c4047;cursor:default}
+.route-stop.route-flight .route-kicker{color:#785a33}
+.route-stop.route-flight strong{color:#263942}
+.route-stop.route-flight .route-date{color:#7b562a}
+.route-stop.route-flight .route-detail,.route-stop.route-flight .route-small{color:#40525a}
+.route-stop.route-flight:before{background:#d4ac76}
+.route-stop.route-place:before{background:#baf3d0}
+.route-mini-flight{align-self:center;padding:21px 7px 10px;min-height:0;border-radius:10px}
+.route-mini-flight strong{font:800 12px/1.5 -apple-system,BlinkMacSystemFont,system-ui,sans-serif;margin:7px 0 4px}
+.route-mini-flight .route-kicker{font-size:9px;letter-spacing:0}
+.route-mini-flight .route-date,.route-mini-flight .route-small,.route-mini-flight .route-detail{font-size:10px}
+.route-mini-flight .route-detail{margin-top:7px}
+.route-time-note{margin:3px 0 25px;font-size:11px;color:#c8dcd3}
+@media(max-width:1100px){.route-strip{grid-template-columns:1fr;gap:10px}.route-strip:before{left:20px;right:auto;top:22px;bottom:25px;border-top:0;border-left:1px dashed #a6c9c18a}.route-stop{margin-left:39px;min-height:0;padding:12px 15px}.route-stop:before{left:-27px;top:19px}.route-stop strong{font-size:20px}.route-mini-flight{align-self:stretch;margin-left:69px;margin-right:22%;padding:9px 14px}.route-mini-flight:before{left:-57px;top:13px}.route-mini-flight strong{font-size:13px;margin:3px 0}.route-mini-flight .route-detail{margin-top:3px}}
+@media(max-width:480px){.route-mini-flight{margin-left:64px;margin-right:10%}.route-mini-flight:before{left:-49px}.route-stop{margin-left:35px}.route-strip:before{left:19px}.route-stop:before{left:-22px}}
 </style>
 </head>
 <body>
@@ -75,7 +95,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 <p class="hero-desc">3 月 5 日從台灣出發，走訪米蘭、冰島與阿姆斯特丹，3 月 21 日回到台灣。下方依日期串起整趟旅程；點選時間軸上的米蘭、冰島或阿姆斯特丹，即可查看各站行程。</p>
 <div class="hero-decoration" aria-hidden="true">’27</div>
 </section>
-<p class="route-guide">✦ 點選米蘭、冰島或阿姆斯特丹，開啟各站行程；去回程航班僅顯示資訊。</p>
+<p class="route-guide">✦ 點選綠色目的地查看行程；淺金色航班僅顯示交通資訊。</p>
 <nav class="route-strip" aria-label="2027年3月5日至21日歐洲五段旅程">
 <div class="route-stop route-flight" aria-label="3月5日至6日，台灣飛往米蘭，不提供詳細頁面">
 <span class="route-kicker">OUTBOUND FLIGHT · 出發</span>
@@ -91,6 +111,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 <span class="route-detail">城市漫步 · 行程預留中</span>
 <span class="route-access">查看米蘭行程 <span aria-hidden="true">↗</span></span>
 </a>
+<div class="route-stop route-flight route-mini-flight" aria-label="03/09 易捷航空 MXP到KEF航班，不可點擊"><span class="route-kicker">✈ 中段航班</span><strong>MXP → KEF</strong><time class="route-date">03/09</time><span class="route-detail">易捷航空</span><span class="route-small">08:15 → 11:55</span></div>
 <a class="route-stop route-place route-feature" href="iceland.html" aria-label="進入冰島九天八夜自駕行程，3月9日至17日">
 <span class="route-kicker">ICELAND · 冰島</span>
 <strong>冰島 <span class="route-en">Iceland</span></strong>
@@ -98,6 +119,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 <span class="route-detail">9 天 8 夜自駕 · 行程已開放</span>
 <span class="route-access">查看冰島行程 <span aria-hidden="true">↗</span></span>
 </a>
+<div class="route-stop route-flight route-mini-flight" aria-label="03/17 泛航航空 KEF到AMS航班，不可點擊"><span class="route-kicker">✈ 中段航班</span><strong>KEF → AMS</strong><time class="route-date">03/17</time><span class="route-detail">泛航航空</span><span class="route-small">14:45 → 18:55</span></div>
 <a class="route-stop route-place" href="amsterdam.html" aria-label="進入阿姆斯特丹行程，3月17日至20日">
 <span class="route-kicker">NETHERLANDS · 荷蘭</span>
 <strong>阿姆斯特丹 <span class="route-en">Amsterdam</span></strong>
@@ -113,12 +135,7 @@ header{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 <span class="route-small">21:20 出發 / 隔日 20:40 抵達<br>曼谷 BKK 轉機一次</span>
 </div>
 </nav>
-<div class="route-connections" aria-label="歐洲境內航班資訊">
-<span class="connection-heading">EUROPE FLIGHTS · 中段航班</span>
-<div class="connection-leg"><strong>03/09</strong><span>米蘭 MXP → 冰島 KEF</span><small>易捷航空 · 08:15 → 11:55</small></div>
-<div class="connection-leg"><strong>03/17</strong><span>冰島 KEF → 阿姆斯特丹 AMS</span><small>泛航航空 · 14:45 → 18:55</small></div>
-<p>航班出發及抵達時間均為各機場當地時間。</p>
-</div>
+<p class="route-time-note">航班時間皆為當地時間。淺金色航班不可點擊，綠色目的地可點擊進入。</p>
 </main>
 <footer class="bottom"><span>2027.03.05—03.21 · TAIWAN / MILAN / ICELAND / AMSTERDAM / TAIWAN</span><span>THE MAIN ROUTE</span></footer>
 </div>
